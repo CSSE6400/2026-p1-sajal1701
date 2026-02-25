@@ -1,22 +1,37 @@
 @baseUrl = http://localhost:6400
+
 ### Health
 GET {{baseUrl}}/api/v1/health
+
+
 ### List All Todos
 GET {{baseUrl}}/api/v1/todos
-### Get a specific Todo
+
+
+### Get a Specific Todo
 GET {{baseUrl}}/api/v1/todos/1
+
+
 ### Create a Todo
 POST {{baseUrl}}/api/v1/todos
 Content-Type: application/json
+
 {
-"title": "An example Todo",
-"description": "This is an example todo",
+"title": "Watch CSSE6400 Lecture",
+"description": "Watch the CSSE6400 lecture on ECHO360 for week 1",
+"completed": true,
+"deadline_at": "2026-02-27T18:00:00"
 }
+
+
 ### Update a Todo
 PUT {{baseUrl}}/api/v1/todos/1
 Content-Type: application/json
+
 {
-"title": "updated title",
+"title": "Join the Richard Thomas fan club"
 }
+
+
 ### Delete a Todo
 DELETE {{baseUrl}}/api/v1/todos/1
